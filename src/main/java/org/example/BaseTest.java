@@ -8,14 +8,15 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-    private static final WebDriver driver = new FirefoxDriver();
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
-        return driver;
+        return driver.get();
     }
 
     @BeforeMethod
     public void start() {
+        driver.set(new FirefoxDriver());
         getDriver().get("https://www.trendyol.com");
         getDriver().findElement(By.className("modal-close")).click();
         getDriver().findElement(By.id("onetrust-accept-btn-handler")).click();
