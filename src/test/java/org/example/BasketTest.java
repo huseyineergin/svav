@@ -12,6 +12,7 @@ public class BasketTest extends BaseTest {
         SearchResultPage searchResultPage = homePage.search("telefon");
 
         ProductPage productPage = searchResultPage.clickFirstProduct();
+        productPage.closeOnboardingPopup();
         productPage.addToBasket();
 
         assertTrue(productPage.isCounterVisibleFromBasket(), "Counter is not visible!");
