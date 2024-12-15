@@ -6,6 +6,7 @@
             <class name="org.example.LoginTest"/>
             <class name="org.example.BasketTest"/>
             <class name="org.example.SearchTest"/>
+            <class name="org.example.FavouritesTest"/>
         </classes>
     </test>
 </suite>
