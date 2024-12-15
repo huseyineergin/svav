@@ -3,7 +3,7 @@ package org.example;
 import org.openqa.selenium.By;
 
 public class FavouritesPage extends BasePage {
-    By removeFavoredProduct = By.className("i-close");
+    By removeFavoredProductButton = By.className("i-close");
     By emptyFavourites = By.className("empty-favorites");
     By favouredProductContainer = By.className("favored-product-container");
 
@@ -16,6 +16,6 @@ public class FavouritesPage extends BasePage {
     }
 
     public void clickRemoveFavouriteProduct() {
-        click(removeFavoredProduct);
+        click(removeFavoredProductButton);
     }
 }
